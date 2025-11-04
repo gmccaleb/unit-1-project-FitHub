@@ -1,12 +1,25 @@
-import './App.css'
+import "./App.css";
+import { Routes, Route } from "react-router";
+import Home from "./components/Home";
+import ExerciseLibrary from "./components/ExerciseLibrary";
+import LogWorkout from "./components/LogWorkout";
+import WorkOutHistory from "./components/WorkOutHistory";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 function App() {
-
   return (
     <>
-     
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Exercise-Library" element={<ExerciseLibrary />} />
+        <Route path="/Log-Workout" element={<LogWorkout />} />
+        <Route path="/Workout-History" element={<WorkOutHistory />} />
+      </Routes>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
