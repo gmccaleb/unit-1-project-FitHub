@@ -5,6 +5,7 @@ import ExerciseLibrary from "./components/ExerciseLibrary";
 import LogWorkout from "./components/LogWorkout";
 import WorkOutHistory from "./components/WorkOutHistory";
 import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Add-Workout" element={<LogWorkout />} />
         <Route path="/Workout-History" element={<WorkOutHistory />} />
       </Routes>
+      <Footer />
     </>
   );
 }
