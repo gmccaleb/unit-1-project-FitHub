@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  justify-content: space-between; /* Title on the left, nav on the right */
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+#title h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 15px; /* Space between nav links */
+}
+
