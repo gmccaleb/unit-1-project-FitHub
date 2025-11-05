@@ -7,9 +7,9 @@ function WorkOutHistory() {
       title: "Full Body Blast",
       date: "10/28/2025",
       exercises: [
-        { name: "Push-ups", sets: "3", reps: "12" },
-        { name: "Squats", sets: "3", reps: "15" },
-        { name: "Plank", sets: "2", reps: "" },
+        { name: "Push-ups", sets: "3", reps: "12", weight: "" },
+        { name: "Squats", sets: "3", reps: "15", weight: 85 },
+        { name: "Plank", sets: "2", reps: "", weight: "" },
       ],
     },
     {
@@ -17,9 +17,9 @@ function WorkOutHistory() {
       title: "Upper Body Strength",
       date: "10/30/2025",
       exercises: [
-        { name: "Bench Press", sets: "4", reps: "8" },
-        { name: "Pull-ups", sets: "3", reps: "6" },
-        { name: "Bicep Curls", sets: "3", reps: "10" },
+        { name: "Bench Press", sets: "4", reps: "8", weight: 135 },
+        { name: "Pull-ups", sets: "3", reps: "6", weight: "" },
+        { name: "Bicep Curls", sets: "3", reps: "10", weight: 25 },
       ],
     },
     {
@@ -27,9 +27,9 @@ function WorkOutHistory() {
       title: "Leg Day Focus",
       date: "10/31/2025",
       exercises: [
-        { name: "Lunges", sets: "3", reps: "12" },
-        { name: "Deadlifts", sets: "4", reps: "6" },
-        { name: "Calf Raises", sets: "", reps: "" },
+        { name: "Lunges", sets: "3", reps: "12", weight: 30 },
+        { name: "Deadlifts", sets: "4", reps: "6", weight: 185 },
+        { name: "Calf Raises", sets: "", reps: "", weight: "" },
       ],
     },
     {
@@ -37,9 +37,9 @@ function WorkOutHistory() {
       title: "Core Crusher",
       date: "11/01/2025",
       exercises: [
-        { name: "Sit-ups", sets: "3", reps: "20" },
-        { name: "Leg Raises", sets: "3", reps: "15" },
-        { name: "Mountain Climbers", sets: "", reps: "" },
+        { name: "Sit-ups", sets: "3", reps: "20", weight: "" },
+        { name: "Leg Raises", sets: "3", reps: "15", weight: "" },
+        { name: "Mountain Climbers", sets: "", reps: "", weight: "" },
       ],
     },
   ];
@@ -68,15 +68,14 @@ function WorkOutHistory() {
                     <ul>
                       {workout.exercises.map((exercise, index) => {
                         const details = [];
-                        if (exercise.sets)
-                          details.push(`${exercise.sets} sets`);
-                        if (exercise.reps)
-                          details.push(`${exercise.reps} reps`);
+                        if (exercise.sets) details.push(`${exercise.sets} sets`);
+                        if (exercise.reps) details.push(`${exercise.reps} reps`);
 
                         return (
                           <li key={index}>
                             {exercise.name}
                             {details.length > 0 && ` — ${details.join(" × ")}`}
+                            {exercise.weight && ` — ${exercise.weight} lbs`}
                           </li>
                         );
                       })}
