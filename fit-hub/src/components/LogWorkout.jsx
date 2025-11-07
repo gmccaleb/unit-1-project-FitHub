@@ -14,6 +14,7 @@ function LogWorkout() {
         <input type="text" placeholder="Exercise Name" required />
         <input type="number" placeholder="Sets" />
         <input type="number" placeholder="Reps" />
+        <input type="number" placeholder="Weight (lbs)" />
       </form>
     </main>
   );
