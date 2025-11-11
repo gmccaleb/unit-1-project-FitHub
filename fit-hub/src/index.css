@@ -3,3 +3,11 @@
 @import url('./components/reusable/ExerciseCard.css');
 @import url('./App.css');
 
+body {
+  font-family: Arial, sans-serif; /* applies to all text */
+  line-height: 1.6;               /* consistent spacing */
+  color: #333;                     /* default text color */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

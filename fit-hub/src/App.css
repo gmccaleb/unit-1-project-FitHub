@@ -15,7 +15,7 @@
 
 a {
   text-decoration: none;
-  color: inherit; /* optional: keep link color same as text */
+  color: inherit; /* keeps link color same as text */
 }
 #title a:hover h1 {
   text-decoration: underline;
@@ -28,9 +28,7 @@ a {
   max-width: 800px; /* limit width for readability */
   margin: 40px auto; /* center the content and add top/bottom spacing */
   padding: 0 20px;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333; /* default text color */
+  
 }
 
 .about h2 {

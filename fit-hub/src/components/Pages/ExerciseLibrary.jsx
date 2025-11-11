@@ -1,5 +1,5 @@
 import React from "react";
-import ExerciseCard from "./reusable/ExerciseCard";
+import ExerciseCard from "../reusable/ExerciseCard";
 
 function ExerciseLibrary() {
   const mockExercises = [
