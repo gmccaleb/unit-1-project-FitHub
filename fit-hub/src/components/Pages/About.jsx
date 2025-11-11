@@ -1,8 +1,6 @@
-import React from 'react'
-
 function About() {
-    return (
-         <main>
+  return (
+    <main className="about">
       <h2>About FitHub</h2>
       <section>
         <p>
@@ -21,7 +19,7 @@ function About() {
         </p>
       </section>
     </main>
-    )
+  );
 }
 
-export default About
+export default About;

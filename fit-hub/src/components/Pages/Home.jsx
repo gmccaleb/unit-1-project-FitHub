@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./reusable/Button";
+import Button from "../reusable/Button";
 import { Link } from "react-router";
 
 function Home() {

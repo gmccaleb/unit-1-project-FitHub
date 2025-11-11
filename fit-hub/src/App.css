@@ -1,0 +1,58 @@
+/* Make the app container fill the viewport and use flex column */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* Main content grows to fill available space */
+.app-content {
+  flex: 1; /* expands between header and footer */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit; /* keeps link color same as text */
+}
+#title a:hover h1 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/* About */
+.about {
+  max-width: 800px; /* limit width for readability */
+  margin: 40px auto; /* center the content and add top/bottom spacing */
+  padding: 0 20px;
+  
+}
+
+.about h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about section p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .about {
+    padding: 0 10px;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .about section p {
+    font-size: 0.95rem;
+  }
+}
