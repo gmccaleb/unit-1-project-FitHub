@@ -1,0 +1,25 @@
+.submit-btn {
+  background-color: #2196f3; /* Submit */
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn:hover{
+     background-color: #1976D2;
+}
+
+.add-exercise-btn{
+     background-color: #4CAF50; /* Add Exercise */
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-exercise-btn:hover{
+      background-color: #45A049;
+}
