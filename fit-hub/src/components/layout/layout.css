@@ -1,22 +1,86 @@
+/* Header container */
 header {
   display: flex;
   justify-content: space-between; /* Title on the left, nav on the right */
   align-items: center;
   padding: 15px 30px;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; 
   border-bottom: 2px solid #e0e0e0;
+  box-sizing: border-box;
 }
 
 #title h1 {
   margin: 0;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #222;
+  color: #1e90ff;
   letter-spacing: 1px;
 }
 
+#title a {
+  text-decoration: none; /* removes underline */
+  color: inherit; /* inherits h1 color */
+}
+
+#title a:hover h1 {
+  text-decoration: underline; /* hover effect */
+  cursor: pointer;
+}
+
+/* Nav menu container */
 .nav-menu {
   display: flex;
   gap: 15px; /* Space between nav links */
 }
 
+/* Nav links styling */
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-menu a:hover {
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+/* Responsive adjustments for tablet and phone */
+@media (max-width: 900px) {
+  /* Keep header as row */
+  header {
+    flex-direction: row; 
+    align-items: center;
+    padding: 15px 20px; /* optional: reduce horizontal padding */
+  }
+
+  .nav-menu {
+    /* optional: wrap if needed */
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  #title h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-menu a {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+}
+
+/* Footer container */
+footer {
+  background-color: #f8f9fa; /* same as header for consistency */
+  border-top: 2px solid #e0e0e0; /* subtle separation from content */
+  text-align: center;            /* center the text */
+  padding: 15px 30px;            /* space inside footer */
+  font-size: 0.9rem;             /* slightly smaller text */
+  color: #333;                   /* dark gray text for readability */
+  box-sizing: border-box;
+}
