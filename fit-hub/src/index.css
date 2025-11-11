@@ -2,6 +2,7 @@
 @import url('./components/reusable/Button.css');
 @import url('./components/reusable/ExerciseCard.css');
 @import url('./App.css');
+@import url('./components/Pages/Pages.css');
 
 body {
   font-family: Arial, sans-serif; /* applies to all text */

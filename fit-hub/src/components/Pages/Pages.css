@@ -1,0 +1,179 @@
+/* ABOUT PAGE */
+.about {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px 20px;
+  background: linear-gradient(145deg, #f8faff, #ffffff); /* gradient */
+  border-radius: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e90ff;
+  font-weight: 800;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.about h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #1e90ff;
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
+.about section {
+  padding: 25px;
+  background: #f0f4ff;
+  border-left: 6px solid #1e90ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);  
+  transition: transform 0.3s ease, background 0.3s ease; /* transform and background color change happens smoothly */
+}
+
+.about section:hover {
+  background: #e6f0ff;
+  transform: translateY(-2px);
+}
+
+.about section p {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .about {
+    padding: 20px 15px;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+  }
+
+  .about section p {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* EXERCISE LIBRARY - GRID*/
+/* Styling for the exercise page h2 */
+.exercise-title {
+   color: #1e90ff; /* FitHub primary blue */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700; 
+  font-size: 2rem; /* slightly bigger */
+  letter-spacing: 1px; /* adds space between letters */
+  position: relative;
+}
+
+/* Optional underline for style */
+.exercise-title::after {
+  content: "";
+  display: block;
+  width: 80px;               /* Length of underline */
+  height: 3px;               /* Thickness */
+  background-color: #1e90ff; /* Same as text color */
+  margin: 8px auto 0 auto;   /* Centered below the h2 */
+  border-radius: 2px;        /* Rounded edges for subtle style */
+}
+
+
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* responsive columns */
+  gap: 25px; /* slightly bigger spacing between cards */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px; /* more padding around the grid */
+  box-sizing: border-box;
+  background-color: #f5f5f5; /* light gray background for FitHub vibe */
+  border-radius: 20px;
+}
+
+
+
+/* WORKOUT HISTORY */
+.workout-history h2 {
+  color: #1e90ff; /* FitHub primary blue */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700; 
+  font-size: 2rem; /* slightly bigger */
+  letter-spacing: 1px; /* adds space between letters */
+  position: relative;
+}
+
+.workout-history table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto 40px auto;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.workout-history thead th {
+  background-color: #1e90ff; /* FitHub primary blue */
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.workout-history tbody tr {
+  background-color: #f9f9f9;
+}
+
+.workout-history tbody tr:nth-child(even) {
+  background-color: #fff; /* color for alternate rows */
+}
+
+.workout-history tbody td {
+  padding: 10px 12px;
+  vertical-align: top;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Exercises list inside table cell */
+.workout-history td ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.workout-history td li {
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments: Table will stay the same on phone and desktop */
+@media (max-width: 600px) {
+  .about {
+    padding: 0 10px;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .about section p {
+    font-size: 0.95rem;
+  }
+}
+
+
+

@@ -45,7 +45,7 @@ function WorkOutHistory() {
   ];
 
   return (
-    <main>
+    <main className="workout-history">
       <h2>Workout History</h2>
       <section>
         {mockWorkouts.length === 0 ? (
