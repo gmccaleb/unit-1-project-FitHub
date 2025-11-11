@@ -1,11 +1,10 @@
-import React from "react";
 import { Link } from "react-router";
 
 function NavMenu() {
   return (
     <div className="nav-menu">
-      <Link className="link" to="/">
-        Home
+      <Link className="link" to="/About">
+        About
       </Link>
       <Link className="link" to="/Exercise-Library ">
         Exercise Library
