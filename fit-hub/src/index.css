@@ -1,3 +1,5 @@
 @import url('./components/layout/layout.css');
 @import url('./components/reusable/Button.css');
-@import url('./components/reusable/ExerciseCard.css')
+/* @import url('./components/reusable/ExerciseCard.css'); */
+@import url('./App.css');
+

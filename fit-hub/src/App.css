@@ -1,0 +1,86 @@
+/* Make the app container fill the viewport and use flex column */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* Main content grows to fill available space */
+.app-content {
+  flex: 1; /* expands between header and footer */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Grid container - Exercise Library */
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px; /* spacing between columns */
+  width: 100%; /* fill parent */
+  max-width: 1200px; /* optional: limit max width */
+  margin: 0 auto; /* center the grid */
+  box-sizing: border-box;
+}
+
+/* Exercise Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  width: 100%; /* fills grid column */
+  box-sizing: border-box;
+}
+
+.card img {
+  width: 100%; /* makes sure the image never overflows */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+/* About */
+.about {
+  max-width: 800px; /* limit width for readability */
+  margin: 40px auto; /* center the content and add top/bottom spacing */
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333; /* default text color */
+}
+
+.about h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about section p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .about {
+    padding: 0 10px;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .about section p {
+    font-size: 0.95rem;
+  }
+}

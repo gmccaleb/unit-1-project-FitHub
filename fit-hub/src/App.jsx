@@ -10,17 +10,21 @@ import About from "./components/About";
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Exercise-Library" element={<ExerciseLibrary />} />
-        <Route path="/Log-Workout" element={<LogWorkout />} />
-        <Route path="/Workout-History" element={<WorkOutHistory />} />
-        <Route path="/About" element={<About />} />
-      </Routes>
+
+      <main className="app-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Exercise-Library" element={<ExerciseLibrary />} />
+          <Route path="/Log-Workout" element={<LogWorkout />} />
+          <Route path="/Workout-History" element={<WorkOutHistory />} />
+          <Route path="/About" element={<About />} />
+        </Routes>
+      </main>
+
       <Footer />
-    </>
+    </div>
   );
 }
 
