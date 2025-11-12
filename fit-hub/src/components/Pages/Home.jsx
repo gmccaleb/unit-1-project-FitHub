@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 function Home() {
   return (
-    <main>
+    <main className='home'>
       <h1>Welcome to FitHub!</h1>
       <p>
         FitHub is your all-in-one workout companion — view our vast exercise library, log
@@ -12,7 +12,7 @@ function Home() {
         starting out or pushing for new goals, FitHub helps you stay organized,
         motivated, and consistent on your fitness journey.
       </p>
-      <img src="/images/fithub-home.jpg" width="100%"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6L0d32Jouz9j74dYxOoMBLGaPcRRuJF57HQ&s" width="100%"/>
 
 
       <section>

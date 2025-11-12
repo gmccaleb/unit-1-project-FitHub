@@ -1,3 +1,82 @@
+/* ==================================================
+   HOME PAGE
+================================================== */
+.home {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 30px 25px;
+  background: linear-gradient(145deg, #f8faff, #ffffff);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e90ff;
+  font-weight: 800;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.home h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #1e90ff;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+.home p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.home img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.home section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-link {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-link:hover {
+  background-color: #0072d1;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments for Home */
+@media (max-width: 600px) {
+  .home {
+    padding: 20px 15px;
+  }
+
+  .home h1 {
+    font-size: 1.8rem;
+  }
+}
+
+
+
 /* ABOUT PAGE */
 .about {
   max-width: 800px;
@@ -34,7 +113,7 @@
   background: #f0f4ff;
   border-left: 6px solid #1e90ff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease, background 0.3s ease; /* transform and background color change happens smoothly */
 }
 
@@ -65,35 +144,33 @@
   }
 }
 
-
-
 /* EXERCISE LIBRARY - GRID*/
-/* Styling for the exercise page h2 */
 .exercise-title {
-   color: #1e90ff; /* FitHub primary blue */
+  color: #1e90ff; /* FitHub primary blue */
   text-align: center;
   margin-bottom: 20px;
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 2rem; /* slightly bigger */
   letter-spacing: 1px; /* adds space between letters */
   position: relative;
 }
 
-/* Optional underline for style */
 .exercise-title::after {
   content: "";
   display: block;
-  width: 80px;               /* Length of underline */
-  height: 3px;               /* Thickness */
+  width: 80px; /* Length of underline */
+  height: 3px; /* Thickness */
   background-color: #1e90ff; /* Same as text color */
-  margin: 8px auto 0 auto;   /* Centered below the h2 */
-  border-radius: 2px;        /* Rounded edges for subtle style */
+  margin: 8px auto 0 auto; /* Centered below the h2 */
+  border-radius: 2px; /* Rounded edges for subtle style */
 }
-
 
 .exercise-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* responsive columns */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  ); /* responsive columns */
   gap: 25px; /* slightly bigger spacing between cards */
   width: 100%;
   max-width: 1200px;
@@ -105,14 +182,89 @@
 }
 
 
+/* LOG WORKOUT */
+/* ==================================================
+   LOG WORKOUT PAGE
+================================================== */
+/* LOG WORKOUT PAGE - CONSISTENT LAYOUT */
+.log-workout {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px 25px;
+  background: linear-gradient(145deg, #f8faff, #ffffff);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.log-workout h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e90ff;
+  font-weight: 800;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.log-workout h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #1e90ff;
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
+.log-workout form {
+  margin-bottom: 20px;
+}
+
+.exercise-inputs {
+  display: flex;
+  flex-wrap: nowrap; /* prevent wrapping on small screens */
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.exercise-inputs input {
+  flex: 1; /* all inputs take equal width */
+  min-width: 80px; /* prevent inputs from being too small */
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d0e6ff;
+}
+
+/* Optional: horizontal scroll if screen is too small */
+.log-workout form {
+  overflow-x: auto;
+}
+
+
+/* Responsive adjustments for LogWorkout */
+@media (max-width: 600px) {
+  .log-workout {
+    padding: 20px 15px;
+  }
+
+  .log-workout h2 {
+    font-size: 1.8rem;
+  }
+
+  .exercise-inputs {
+    flex-direction: column;
+  }
+}
+
+
 
 /* WORKOUT HISTORY */
 .workout-history h2 {
   color: #1e90ff; /* FitHub primary blue */
   text-align: center;
   margin-bottom: 20px;
-  font-weight: 700; 
-  font-size: 2rem; /* slightly bigger */
+  font-weight: 700;
+  font-size: 2rem; 
   letter-spacing: 1px; /* adds space between letters */
   position: relative;
 }
@@ -174,6 +326,3 @@
     font-size: 0.95rem;
   }
 }
-
-
-
