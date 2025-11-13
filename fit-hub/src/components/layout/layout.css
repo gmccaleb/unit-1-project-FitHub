@@ -1,3 +1,7 @@
+/* ==================================================
+   HEADER STYLING
+================================================== */
+
 /* Header container */
 header {
   display: flex;
@@ -9,6 +13,7 @@ header {
   box-sizing: border-box;
 }
 
+/* Site title */
 #title h1 {
   margin: 0;
   font-size: 1.8rem;
@@ -23,11 +28,11 @@ header {
 }
 
 #title a:hover h1 {
-  text-decoration: underline; /* hover effect */
+  text-decoration: underline;
   cursor: pointer;
 }
 
-/* Nav menu container */
+/* Navigation menu container */
 .nav-menu {
   display: flex;
   gap: 15px; /* Space between nav links */
@@ -48,39 +53,64 @@ header {
   color: #fff;
 }
 
-/* Responsive adjustments for tablet and phone */
+/* ==================================================
+   RESPONSIVE STYLING
+================================================== */
+
+/* Tablet adjustments */
 @media (max-width: 900px) {
-  /* Keep header as row */
   header {
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
-    padding: 15px 20px; /* optional: reduce horizontal padding */
+    padding: 15px 20px; /* slightly smaller horizontal padding */
   }
 
   .nav-menu {
-    /* optional: wrap if needed */
     gap: 10px;
   }
 }
 
+/* Mobile adjustments */
 @media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
   #title h1 {
     font-size: 1.5rem;
   }
 
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
   .nav-menu a {
     font-size: 0.9rem;
-    padding: 5px 8px;
+    padding: 8px 12px;
+    background-color: #1e90ff;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .nav-menu a:hover {
+    background-color: #0072d1;
   }
 }
 
-/* Footer container */
+/* ==================================================
+   FOOTER STYLING
+================================================== */
+
 footer {
-  background-color: #f8f9fa; /* same as header for consistency */
-  border-top: 2px solid #e0e0e0; /* subtle separation from content */
-  text-align: center;            /* center the text */
-  padding: 15px 30px;            /* space inside footer */
-  font-size: 0.9rem;             /* slightly smaller text */
-  color: #333;                   /* dark gray text for readability */
+  background-color: #f8f9fa; /* same as header */
+  border-top: 2px solid #e0e0e0; 
+  text-align: center;            
+  padding: 15px 30px;            
+  font-size: 0.9rem;             
+  color: #333;                  
   box-sizing: border-box;
 }
