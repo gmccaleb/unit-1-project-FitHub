@@ -10,15 +10,18 @@ function LogWorkout() {
   };
 
   return (
-    <main>
+    <main className="log-workout">
       {" "}
       <h2>Log a Workout</h2>{" "}
+
       <form>
         {" "}
-        <label>
+        <label className="workout-title">
           {" "}
-          Workout Title <input type="text" required />{" "}
+          <h4>Workout Title: </h4>
+          <input type="text" required />{" "}
         </label>{" "}
+        
         <h4>Exercises:</h4>{" "}
         {exerciseFields.map((index) => (
           <div key={index} className="exercise-inputs">

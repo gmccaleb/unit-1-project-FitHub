@@ -51,12 +51,14 @@ function ExerciseLibrary() {
   ];
 
   return (
-    <main>
-      <h2>Exercise Library</h2>
+    <main> 
+      <h2 className="exercise-title">Exercise Library</h2>
       <section className="exercise-grid">
-        {mockExercises.map((exercise) => (
-          <ExerciseCard key={exercise.id} exercise={exercise} />
-        ))}
+        
+  {mockExercises.map((exercise) => (
+    <ExerciseCard key={exercise.id} exercise={exercise} />
+  ))}
+
       </section>
     </main>
   );

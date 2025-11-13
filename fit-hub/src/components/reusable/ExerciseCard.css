@@ -1,34 +1,60 @@
-/* Grid container - Exercise Library */
-.exercise-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  gap: 20px; /* spacing between columns */
-  width: 100%; /* fill parent */
-  max-width: 1200px; /* optional: limit max width */
-  margin: 0 auto; /* center the grid */
-  box-sizing: border-box;
-}
+
 
 /* Exercise Card */
 .card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #fff;
-  width: 100%; /* fills grid column */
+  border-radius: 12px;
+  padding: 15px;
+  background-color: #ffffff;
+  width: 100%;
   box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  cursor: pointer; /* makes it feel interactive */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); /* bigger shadow on hover */
+  background-color: #e8f0ff; /* subtle brand blue tint on hover */
 }
 
 .card img {
-  width: 100%; /* makes sure the image never overflows */
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
+  width: 100%;
+  height: auto; /* keep original aspect ratio */
+  border-radius: 10px;
+  object-fit: contain; /* show entire image without cropping */
+  margin-bottom: 10px;
+  border: 2px solid #1e90ff20; /* subtle transparent blue border */
 }
 
 .card h3 {
-  margin-top: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e90ff; /* FitHub primary blue */
+  font-family: 'Inter', sans-serif;
+}
+
+.card p {
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555; /* slightly darker gray for readability */
+  margin-top: 5px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Optional badge for tags (e.g., Cardio, Strength) */
+.card .badge {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 5px;
   text-align: center;
 }
