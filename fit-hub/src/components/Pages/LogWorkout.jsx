@@ -1,9 +1,13 @@
 import { useState } from "react";
 import Button from "../reusable/Button";
+import { useNavigate } from "react-router";
 
 function LogWorkout({ workoutHistory, setWorkoutHistory }) {
+  const navigate = useNavigate();
   const [workoutTitle, setWorkoutTitle] = useState("");
-  const [exercises, setExercises] = useState([{ name: "", sets: "", reps: "", weight: "" }]);
+  const [exercises, setExercises] = useState([
+    { name: "", sets: "", reps: "", weight: "" },
+  ]);
 
   // Add new empty fields for exercises
   const addExerciseField = () => {
@@ -12,8 +16,9 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
 
   // Updates individual exercise fields
   const handleExerciseChange = (index, field, value) => {
-    const updatedExercises = exercises.map((exercise, i) =>
-      i === index ? { ...exercise, [field]: value } : exercise // keeps the same if it wasn't updated
+    const updatedExercises = exercises.map(
+      (exercise, i) =>
+        i === index ? { ...exercise, [field]: value } : exercise // keeps the same if it wasn't updated
     );
     setExercises(updatedExercises);
   };
@@ -34,6 +39,10 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
     // Resets form for next logged workout
     setWorkoutTitle("");
     setExercises([{ name: "", sets: "", reps: "", weight: "" }]);
+
+    navigate("/Workout-Submitted", {
+      state: { workoutTitle: newWorkout.title },
+    });
   };
 
   return (
@@ -58,26 +67,52 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
               type="text"
               placeholder="Exercise Name"
               value={exercise.name}
-              onChange={(e) => handleExerciseChange(index, "name", e.target.value)}
+              onChange={(e) =>
+                handleExerciseChange(index, "name", e.target.value)
+              }
               required
             />
             <input
               type="number"
               placeholder="Sets"
               value={exercise.sets}
-              onChange={(e) => handleExerciseChange(index, "sets", e.target.value)}
+              onChange={(e) =>
+                handleExerciseChange(index, "sets", e.target.value)
+              }
+              min={0} 
+              onKeyDown={(event) => {
+                if (event.key === "e" || event.key === "E") {  {/* prevents e from being entered */}
+                  event.preventDefault();
+                }
+              }}
             />
             <input
               type="number"
               placeholder="Reps"
               value={exercise.reps}
-              onChange={(e) => handleExerciseChange(index, "reps", e.target.value)}
+              onChange={(e) =>
+                handleExerciseChange(index, "reps", e.target.value)
+              }
+              min={0} 
+              onKeyDown={(event) => {
+                if (event.key === "e" || event.key === "E") {
+                  event.preventDefault();
+                }
+              }}
             />
             <input
               type="number"
               placeholder="Weight (lbs)"
               value={exercise.weight}
-              onChange={(e) => handleExerciseChange(index, "weight", e.target.value)}
+              onChange={(e) =>
+                handleExerciseChange(index, "weight", e.target.value)
+              }
+              min={0}
+              onKeyDown={(event) => {
+                if (event.key === "e" || event.key === "E") {
+                  event.preventDefault(); 
+                }
+              }}
             />
           </div>
         ))}
@@ -95,3 +130,4 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
 }
 
 export default LogWorkout;
+

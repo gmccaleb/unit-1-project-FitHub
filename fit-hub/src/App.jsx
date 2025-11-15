@@ -9,6 +9,7 @@ import WorkOutHistory from "./components/Pages/WorkOutHistory";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import About from "./components/Pages/About";
+import WorkoutSubmitted from "./components/Pages/WorkoutSubmitted";
 
 function App() {
   // Initialize workout history from localStorage or empty array if there is nothing in storage
@@ -34,6 +35,8 @@ function App() {
             <Route path="/Log-Workout" element={
                 <LogWorkout workoutHistory={workoutHistory} setWorkoutHistory={setWorkoutHistory}/>}
             />
+
+  <Route path="/Workout-Submitted" element={<WorkoutSubmitted/>} />
 
             {/* Pass history state to WorkoutHistory */}
             <Route
