@@ -3,52 +3,503 @@ import ExerciseCard from "../reusable/ExerciseCard";
 
 function ExerciseLibrary() {
   const mockExercises = [
+  {
+    "id": 1,
+    "name": "Push-Up",
+    "instructions": "Start in a plank position with hands slightly wider than shoulder-width. Keep your body in a straight line from head to heels. Bend elbows to lower your chest toward the floor until elbows are at 90 degrees. Push back up to the starting position while keeping your core engaged.",
+    "muscleGroups": ["Chest", "Triceps", "Shoulders"],
+    "image": "https://media.istockphoto.com/id/578104104/vector/step-to-instruction-in-push-up.jpg?s=612x612&w=0&k=20&c=AYSyhYJB-98AZL2Euig4fygTjdxliyE8TWHGfXNO6go="
+  },
+  {
+    "id": 2,
+    "name": "Squat",
+    "instructions": "Stand with feet shoulder-width apart, toes slightly pointed out. Keep chest lifted and back straight. Push hips back and bend knees to lower into a squat until thighs are parallel to the floor. Press through heels to return to standing. Maintain core engagement throughout.",
+    "muscleGroups": ["Quadriceps", "Glutes", "Hamstrings"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhOlcT7QMwcTT7UqpbCVr1Fi2nKn0Edr5QAg&s"
+  },
+  {
+    "id": 3,
+    "name": "Dumbbell Shoulder Press",
+    "instructions": "Sit or stand with a dumbbell in each hand at shoulder height, palms facing forward. Press the dumbbells upward until arms are fully extended overhead. Slowly lower back to starting position. Keep core engaged and avoid arching your back.",
+    "muscleGroups": ["Shoulders", "Triceps", "Upper Chest"],
+    "image": "https://media.istockphoto.com/id/1284088195/vector/women-doing-seated-dumbbell-shoulder-press-on-bench.jpg?s=612x612&w=0&k=20&c=6-EK-TNL2WZrI45C3jS0CHz-toVrW6txezrCFrmOspI="
+  },
+  {
+    "id": 4,
+    "name": "Deadlift",
+    "instructions": "Stand with feet hip-width apart, barbell over mid-foot. Hinge at the hips and bend knees to grab the bar with an overhand grip. Keep back straight and chest up. Push through heels to lift the bar, extending hips and knees fully. Lower the bar slowly to the ground while maintaining control.",
+    "muscleGroups": ["Back", "Glutes", "Hamstrings", "Core"],
+    "image": "https://www.shutterstock.com/image-vector/man-doing-barbell-deadlifts-exercise-600nw-2031951569.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Lunges",
+    "instructions": "Stand upright with feet hip-width apart. Step forward with right leg, lowering hips until both knees are bent at 90 degrees. Push through the right heel to return to standing. Repeat on the left side. Keep torso upright and core engaged.",
+    "muscleGroups": ["Quadriceps", "Glutes", "Hamstrings", "Core"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfcYc7WSqFPa5ByqNwAsNnomSiDpeEnxU39A&s"
+  },
+  {
+    "id": 6,
+    "name": "Plank",
+    "instructions": "Start on forearms and toes with elbows under shoulders. Keep body in a straight line from head to heels. Engage core and glutes. Hold the position without sagging hips or raising your butt. Maintain steady breathing throughout.",
+    "muscleGroups": ["Core", "Shoulders", "Glutes"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTECFNf5Q7DjrY-P9eBi4YGXhHtlKcF21lzXg&s"
+  },
+  {
+    "id": 7,
+    "name": "Bent-Over Row",
+    "instructions": "Hold a barbell or dumbbells with palms facing down. Hinge forward at the hips, keeping back straight and core tight. Pull the weight toward your lower chest, squeezing shoulder blades together. Lower slowly to the starting position.",
+    "muscleGroups": ["Back", "Biceps", "Rear Shoulders"],
+    "image": "https://www.shutterstock.com/image-vector/man-doing-bent-over-barbell-600nw-1831637863.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Bicep Curl",
+    "instructions": "Stand with feet shoulder-width apart, holding a dumbbell in each hand, palms facing forward. Keep elbows close to your torso and curl the weights to shoulder level. Lower slowly to starting position. Avoid swinging your arms.",
+    "muscleGroups": ["Biceps"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwqChKOZEopJ4SfPnnoz4RqCYXmO4Ttww2kw&s"
+  },
+  {
+    "id": 9,
+    "name": "Tricep Dip",
+    "instructions": "Place hands on a bench or chair behind you, fingers pointing forward. Extend legs in front. Lower your body by bending elbows until upper arms are parallel to the floor. Push through palms to return to starting position. Keep shoulders down and back.",
+    "muscleGroups": ["Triceps", "Shoulders", "Chest"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdlXPbgH6DI0LcXhjqZqw14l7tO_Q289f2ug&s"
+  },
+  {
+    "id": 10,
+    "name": "Mountain Climber",
+    "instructions": "Start in a high plank position with hands under shoulders. Drive your right knee toward your chest, then switch legs quickly as if running in place. Keep hips low and core engaged. Maintain steady, controlled breathing.",
+    "muscleGroups": ["Core", "Legs", "Shoulders"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQxTT03V7LcFld-1k-Wor_Th7tz3tm1NEd3w&s"
+  },
+  {
+    "id": 11,
+    "name": "Pull-Up",
+    "instructions": "Grab a pull-up bar with hands slightly wider than shoulder-width. Hang with arms fully extended. Pull your chest toward the bar by bending elbows and engaging your back muscles. Lower slowly back to start. Avoid swinging or using momentum.",
+    "muscleGroups": ["Back", "Biceps", "Shoulders"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMBM5iGUoa7fn-XbHfx5AHgfb3Y1bNAYjig&s"
+  },
+  {
+    "id": 12,
+    "name": "Chin-Up",
+    "instructions": "Grab a pull-up bar with palms facing you and hands shoulder-width apart. Hang fully extended. Pull yourself upward by bending elbows until chin passes the bar. Lower slowly with control. Focus on back and bicep engagement.",
+    "muscleGroups": ["Back", "Biceps", "Forearms"],
+    "image": "https://www.shutterstock.com/image-vector/young-woman-doing-chin-assistance-600nw-2519036195.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Russian Twist",
+    "instructions": "Sit on the floor with knees bent and heels slightly lifted. Lean back slightly, holding a weight or clasping hands. Rotate your torso to touch hands or weight to the right, then left. Keep core tight and movements controlled. Avoid leaning backward.",
+    "muscleGroups": ["Core", "Obliques"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe9GBKqM7o7aTzEcsMZxgtjY2e3eP9otdi6Q&s"
+  },
+  {
+    "id": 14,
+    "name": "Bicycle Crunch",
+    "instructions": "Lie on your back with hands behind your head and legs lifted at 90 degrees. Bring right elbow to left knee while extending right leg. Switch sides in a slow, controlled cycling motion. Keep lower back pressed to the floor and avoid pulling on neck.",
+    "muscleGroups": ["Abs", "Obliques"],
+    "image": "https://miro.medium.com/v2/resize:fit:1400/0*N_M65p5nWlq4tZ9U.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Leg Raise",
+    "instructions": "Lie flat on your back with legs straight and hands under your glutes for support. Keep legs together and raise them toward the ceiling until hips are slightly off the floor. Lower slowly without touching the ground. Engage core throughout.",
+    "muscleGroups": ["Abs", "Hip Flexors"],
+    "image": ""
+  },
+  {
+    "id": 16,
+    "name": "Glute Bridge",
+    "instructions": "Lie on your back with knees bent and feet flat. Place arms at your sides. Press through your heels to lift hips toward the ceiling until body forms a straight line from shoulders to knees. Lower hips slowly and repeat. Squeeze glutes at the top.",
+    "muscleGroups": ["Glutes", "Hamstrings", "Core"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl1AoFfuiPK5r_hdZls7a2KwslMVU3vXxwfw&s"
+  },
+  {
+    "id": 17,
+    "name": "Hip Thrust",
+    "instructions": "Sit on the floor with upper back against a bench. Roll a barbell over hips (optional). Plant feet shoulder-width apart. Drive hips up toward ceiling, squeezing glutes at the top. Lower hips under control. Keep chin tucked slightly and core tight.",
+    "muscleGroups": ["Glutes", "Hamstrings", "Core"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBVeJYvsCm4DCaZiwQ7bEBgcN66Rut3-BTTw&s"
+  },
+  {
+    "id": 18,
+    "name": "Lateral Raise",
+    "instructions": "Stand with a dumbbell in each hand at your sides. Keep elbows slightly bent. Lift arms out to the sides until shoulder height, then lower slowly. Maintain control and avoid swinging the weights. Engage shoulders and core.",
+    "muscleGroups": ["Shoulders", "Traps"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMH4vYN_e448JyznNB88JVnM85DB1G2IyMnA&s"
+  },
+  {
+    "id": 19,
+    "name": "Front Raise",
+    "instructions": "Stand upright holding dumbbells in front of thighs, palms facing thighs. Lift weights straight in front to shoulder height with arms extended. Lower slowly under control. Keep core tight and avoid using momentum.",
+    "muscleGroups": ["Shoulders", "Upper Chest"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPJNV9zBN1BhSqDMC8R0HYc2Wh_SdaTp6ISg&s"
+  },
+  {
+    "id": 20,
+    "name": "Overhead Tricep Extension",
+    "instructions": "Hold a dumbbell with both hands above your head, arms fully extended. Keep elbows close to your ears. Lower the weight behind your head by bending elbows. Extend arms back up slowly. Engage core and avoid flaring elbows.",
+    "muscleGroups": ["Triceps"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXhDYVYPHHXxJI1cNwxYmS9sHVfWDYtU6j7g&s"
+  },
+  {
+    "id": 21,
+    "name": "Jumping Jack",
+    "instructions": "Stand upright with feet together and arms at your sides. Jump feet out to the sides while raising arms overhead. Jump back to starting position. Maintain a steady pace and land softly on the balls of your feet.",
+    "muscleGroups": ["Legs", "Shoulders", "Core"],
+    "image": "https://st2.depositphotos.com/4293685/42451/v/450/depositphotos_424510088-stock-illustration-sport-woman-doing-exercise-jumping.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Burpee",
+    "instructions": "Stand upright, then drop into a squat position with hands on the floor. Kick feet back into a plank position. Immediately return feet to squat position and jump up with arms overhead. Perform each movement in a controlled, fluid motion.",
+    "muscleGroups": ["Full Body", "Core", "Legs", "Chest", "Arms"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCjH8zyH6UUCJfF3-WDVDLWodRsxVni8dSNg&s"
+  },
+  {
+    "id": 23,
+    "name": "Step-Up",
+    "instructions": "Stand in front of a bench or sturdy platform. Step up with your right foot, pressing through the heel to lift your body. Bring the left foot up, then step back down with the right foot first. Alternate leading legs. Keep torso upright and core engaged.",
+    "muscleGroups": ["Glutes", "Quadriceps", "Hamstrings"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFTZRhNJ__ZH1VRCc4hhp5xzKcDxltIlnC6w&s"
+  },
+  {
+    "id": 24,
+    "name": "Side Plank",
+    "instructions": "Lie on your side with legs extended. Place your elbow directly under your shoulder. Lift hips off the ground, forming a straight line from head to feet. Hold the position while keeping core tight and avoiding sagging hips. Repeat on the other side.",
+    "muscleGroups": ["Core", "Obliques", "Shoulders"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEkcLcGFS6LaeLNsW6Oh1mj-4hOxfK5xiB0A&s"
+  },
+  {
+    "id": 25,
+    "name": "Wall Sit",
+    "instructions": "Stand with your back against a wall, feet shoulder-width apart. Slide down until knees are at 90 degrees. Keep back flat against the wall and hold position. Engage core and avoid lifting heels.",
+    "muscleGroups": ["Quadriceps", "Glutes", "Hamstrings"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxjIZYSZ16bagildmHU4hjZW3a2-ydtFbXSg&s"
+  },
+  {
+    "id": 26,
+    "name": "Incline Push-Up",
+    "instructions": "Place hands on an elevated surface such as a bench or sturdy table, feet on the floor. Keep body in a straight line from head to heels. Bend elbows to lower chest toward the surface, then push back up. Engage core and avoid sagging hips.",
+    "muscleGroups": ["Chest", "Triceps", "Shoulders"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-memJDV-tU8MN4uwd_sAiJ9aAL7BfO5uTtQ&s"
+  },
+  {
+    "id": 27,
+    "name": "Decline Push-Up",
+    "instructions": "Place feet on an elevated surface and hands on the floor, shoulder-width apart. Maintain a straight body line. Lower chest toward the floor by bending elbows, then push back up. Keep core tight and avoid arching your back.",
+    "muscleGroups": ["Chest", "Shoulders", "Triceps"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTht-A3Op6gA3x32VKNU4rwMqGI40Q4JEMpMA&s"
+  },
+  {
+    "id": 28,
+    "name": "Goblet Squat",
+    "instructions": "Hold a dumbbell or kettlebell close to your chest. Stand with feet shoulder-width apart. Push hips back and bend knees to lower into a squat, keeping chest lifted. Return to standing by pressing through heels. Keep core engaged and back straight.",
+    "muscleGroups": ["Quadriceps", "Glutes", "Hamstrings", "Core"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ8Bnb5f8OyZKSJ0XYnY2l6MrTuzA7q-XVBA&s"
+  },
+  {
+    "id": 29,
+    "name": "Sumo Squat",
+    "instructions": "Stand with feet wider than shoulder-width and toes pointing slightly out. Lower hips straight down while keeping chest lifted. Press through heels to return to standing. Engage core and squeeze glutes at the top.",
+    "muscleGroups": ["Quadriceps", "Glutes", "Hamstrings", "Inner Thighs"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOyhv2jVzO2HBoAMGIL_6WVKhjsLtOeuGSZw&s"
+  },
+  {
+    "id": 30,
+    "name": "Single-Leg Deadlift",
+    "instructions": "Stand on one leg, holding a dumbbell in the opposite hand. Hinge at the hips to lower the weight toward the floor while extending the free leg behind you. Keep back straight. Return to standing by driving hips forward and squeezing glutes. Switch legs.",
+    "muscleGroups": ["Hamstrings", "Glutes", "Core", "Back"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJz3QBlkuF4-zSjmnL3nxHbH_9IhUHvTyjVw&s"
+  },
+  {
+    "id": 31,
+    "name": "Reverse Lunge",
+    "instructions": "Stand upright with feet hip-width apart. Step backward with right leg, lowering hips until both knees are at 90 degrees. Push through the front heel to return. Repeat on the other leg. Keep chest upright and core engaged.",
+    "muscleGroups": ["Quadriceps", "Glutes", "Hamstrings", "Core"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTny-VEJCOKDb5OiAVpH7wtktL3c5HpYMC-pg&s"
+  },
+  {
+    "id": 32,
+    "name": "Curtsy Lunge",
+    "instructions": "Stand upright, feet hip-width apart. Step right leg diagonally behind left leg, lowering hips until knees are at 90 degrees. Push through left heel to return to start. Repeat on opposite side. Keep torso upright and core tight.",
+    "muscleGroups": ["Glutes", "Quadriceps", "Hamstrings", "Adductors"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGWb6nPVRShHJEkCuILsyHTpY7A9iy3T1TKQ&s"
+  },
+  {
+    "id": 33,
+    "name": "Chest Fly",
+    "instructions": "Lie on a bench holding dumbbells above chest, palms facing each other. With elbows slightly bent, lower arms out to sides until chest is stretched. Bring dumbbells back together over chest. Keep shoulders pressed into the bench and core engaged.",
+    "muscleGroups": ["Chest", "Shoulders"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMyL7-et2fsd1Joj29N4JNjt9UIlbgv6zvYQ&s"
+  },
+  {
+    "id": 34,
+    "name": "Incline Dumbbell Press",
+    "instructions": "Lie on an incline bench with dumbbells in each hand at chest level. Press weights upward until arms are extended. Lower under control. Keep core engaged and shoulders stable throughout.",
+    "muscleGroups": ["Chest", "Shoulders", "Triceps"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRqjMNdQpZYq6WJeQH0PpdfTD_vyAwDMAtug&s"
+  },
+  {
+    "id": 35,
+    "name": "Cable Row",
+    "instructions": "Sit at a cable machine with feet planted. Grab the handle with both hands. Pull handle toward your torso, keeping elbows close and squeezing shoulder blades together. Slowly return to start. Maintain straight back and engaged core.",
+    "muscleGroups": ["Back", "Biceps", "Rear Shoulders"],
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/015/708/447/small/man-doing-seated-low-cable-back-rows-exercise-flat-illustration-isolated-on-white-background-vector.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Lat Pulldown",
+    "instructions": "Sit at a lat pulldown machine, grasp the bar wider than shoulder-width. Pull bar toward upper chest by engaging lats and bending elbows. Slowly return to full arm extension. Keep torso upright and core tight.",
+    "muscleGroups": ["Back", "Biceps", "Shoulders"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG4LCgQZ1SZIJEgTVxPlk2nXpgdazyKPr7eg&s"
+  },
+  {
+    "id": 37,
+    "name": "Hammer Curl",
+    "instructions": "Stand upright with dumbbells at sides, palms facing each other. Curl weights up while keeping palms facing each other. Lower under control. Keep elbows close to torso and avoid swinging.",
+    "muscleGroups": ["Biceps", "Forearms"],
+    "image": "data:image/jpeg;base64,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"
+  },
+  {
+    "id": 38,
+    "name": "Concentration Curl",
+    "instructions": "Sit on a bench, lean forward slightly. Hold dumbbell in one hand, resting elbow on inner thigh. Curl weight toward shoulder, lower slowly. Focus on strict form and bicep contraction. Switch arms after reps.",
+    "muscleGroups": ["Biceps"],
+    "image": "https://www.shutterstock.com/image-vector/man-doing-dumbbell-concentration-curl-600nw-2165923511.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Overhead Dumbbell Press",
+    "instructions": "Stand or sit with dumbbells at shoulder height. Press weights overhead until arms are extended. Lower slowly. Keep core tight and avoid arching back.",
+    "muscleGroups": ["Shoulders", "Triceps", "Upper Chest"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTa365CokBjvbEXc1Oi5PmB_LvpDkWMtMmwA&s"
+  },
+  {
+    "id": 40,
+    "name": "Dumbbell Row",
+    "instructions": "Place right knee and hand on a bench for support. Hold a dumbbell in left hand, arm extended. Pull dumbbell toward torso, squeezing shoulder blade. Lower under control. Switch sides after reps.",
+    "muscleGroups": ["Back", "Biceps", "Rear Shoulders"],
+    "image": "https://media.istockphoto.com/id/1407962419/vector/man-doing-single-arm-bent-over-row-exercise-flat-vector-illustration-isolated-on-white.jpg?s=612x612&w=0&k=20&c=jN-GJvvlh6f0WXtZLSq50VJrJsxjSX608A0TLynMrwI="
+  },
+  {
+    "id": 41,
+    "name": "Reverse Fly",
+    "instructions": "Hold dumbbells in each hand, hinge at hips with back flat. Lift arms out to sides to shoulder height, keeping elbows slightly bent. Lower slowly. Engage back muscles and avoid swinging.",
+    "muscleGroups": ["Rear Shoulders", "Back", "Traps"],
+    "image": "https://www.shutterstock.com/image-vector/man-doing-dumbbell-bent-over-600nw-2085865177.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Side Lunge",
+    "instructions": "Stand upright with feet together. Step right leg to the side, bending right knee and pushing hips back. Keep left leg straight. Push through right heel to return to start. Repeat on the left side. Keep torso upright.",
+    "muscleGroups": ["Glutes", "Quadriceps", "Hamstrings", "Adductors"],
+    "image": "https://previews.123rf.com/images/lioputra/lioputra2107/lioputra210700011/171186223-woman-doing-dumbbell-side-lunges-lateral-lunges-exercise-flat-vector-illustration-isolated-on.jpg"
+  },
+  {
+    "id": 43,
+    "name": "High Knees",
+    "instructions": "Stand upright. Run in place, bringing knees up toward chest as high as possible. Pump arms as if sprinting. Maintain fast pace and engage core throughout.",
+    "muscleGroups": ["Legs", "Core", "Cardio"],
+    "image": "https://static.vecteezy.com/system/resources/previews/006/417/644/non_2x/woman-doing-high-knees-front-knee-lifts-run-jog-on-the-spot-exercise-flat-illustration-isolated-on-white-background-free-vector.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Butt Kick",
+    "instructions": "Stand upright. Run in place, kicking heels toward glutes. Pump arms and keep torso upright. Maintain a fast, controlled pace.",
+    "muscleGroups": ["Legs", "Glutes", "Cardio"],
+    "image": "https://media.istockphoto.com/id/1356719193/vector/sport-women-doing-butt-kicks-exercise-in-2-steps-workout-diagram.jpg?s=612x612&w=0&k=20&c=jDXVQWpTTHJBKtwafnhfRWD9Mu2FwsuN6RKmcg11ca0="
+  },
+  {
+    "id": 45,
+    "name": "Skater Jump",
+    "instructions": "Start on the right leg. Jump laterally to the left, landing on left leg and swinging right leg behind. Swing arms for balance. Keep chest upright and land softly. Alternate sides in a controlled rhythm.",
+    "muscleGroups": ["Legs", "Glutes", "Core"],
+    "image": "https://static.vecteezy.com/system/resources/previews/007/745/859/non_2x/woman-doing-skater-exercise-flat-illustration-isolated-on-white-background-free-vector.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Box Jump",
+    "instructions": "Stand in front of a sturdy box or platform. Bend knees slightly, swing arms, and jump onto the box, landing softly with knees slightly bent. Step down carefully and repeat.",
+    "muscleGroups": ["Legs", "Glutes", "Core"],
+    "image": "https://www.shutterstock.com/image-vector/woman-doing-high-box-jump-600nw-1981139660.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Farmer’s Carry",
+    "instructions": "Hold a heavy dumbbell or kettlebell in each hand at your sides. Stand tall and walk forward for a set distance while keeping core tight and shoulders down. Maintain controlled, steady steps.",
+    "muscleGroups": ["Forearms", "Core", "Shoulders", "Legs"],
+    "image": "https://personallevelfitness.com/wp-content/uploads/2022/03/Farmers-Carry-scaled.jpeg"
+  },
+  {
+    "id": 48,
+    "name": "Medicine Ball Slam",
+    "instructions": "Hold a medicine ball overhead with both hands. Slam it to the ground as hard as possible, squatting slightly. Catch or pick up the ball and repeat. Engage core and use controlled force.",
+    "muscleGroups": ["Core", "Shoulders", "Arms", "Back"],
+    "image": "https://static.vecteezy.com/system/resources/previews/027/208/879/non_2x/woman-doing-side-lateral-medicine-ball-throw-slam-exercise-flat-illustration-isolated-on-white-background-workout-character-set-vector.jpg"
+  },
+  {
+    "id": 49,
+    "name": "Kettlebell Swing",
+    "instructions": "Stand with feet slightly wider than shoulder-width, holding a kettlebell with both hands. Hinge at hips and swing kettlebell between legs, then thrust hips forward to swing to chest level. Keep core tight and arms relaxed.",
+    "muscleGroups": ["Glutes", "Hamstrings", "Core", "Shoulders"],
+    "image": "https://static.vecteezy.com/system/resources/previews/016/137/992/non_2x/man-doing-two-arm-kettlebell-swing-exercise-flat-illustration-isolated-on-white-background-vector.jpg"
+  },
+  {
+    "id": 50,
+    "name": "Jump Squat",
+    "instructions": "Stand with feet shoulder-width apart. Lower into a squat, then explode upward into a jump. Land softly, immediately lowering into the next squat. Keep chest up and core engaged.",
+    "muscleGroups": ["Quadriceps", "Glutes", "Hamstrings", "Calves"],
+    "image": "https://static.vecteezy.com/system/resources/previews/026/751/825/non_2x/woman-doing-side-to-side-jump-squat-exercise-vector.jpg"
+  },
+  {
+    "id": 53,
+    "name": "Plank Shoulder Tap",
+    "instructions": "Start in a high plank position with hands under shoulders. Lift right hand to tap left shoulder, then return. Alternate sides while keeping hips stable. Engage core to minimize rocking.",
+    "muscleGroups": ["Core", "Shoulders", "Chest"],
+    "image": "https://gymgeek.com/wp-content/uploads/2024/02/plank-shoulder-taps.png"
+  },
+
+  {
+    "id": 58,
+    "name": "Flutter Kicks",
+    "instructions": "Lie on your back, hands under hips. Lift legs slightly off the ground and alternate small kicks up and down. Keep core tight and lower back pressed to floor. Maintain a steady pace.",
+    "muscleGroups": ["Core", "Lower Abs", "Hip Flexors"],
+    "image": "https://t4.ftcdn.net/jpg/02/55/19/97/360_F_255199728_NSWOS8SQxD8S32UhiJHnm5UvOJcVtA86.jpg"
+  },
+  {
+    "id": 59,
+    "name": "V-Ups",
+    "instructions": "Lie flat on back, arms overhead, legs straight. Simultaneously lift upper body and legs to meet in a V position. Lower back down slowly with control. Keep core engaged throughout.",
+    "muscleGroups": ["Core", "Hip Flexors", "Obliques"],
+    "image": "https://gymgeek.com/wp-content/uploads/2024/02/v-sits.png"
+  },
+  {
+    "id": 60,
+    "name": "Standing Calf Raise",
+    "instructions": "Stand upright with feet hip-width apart. Push through balls of feet to lift heels off the ground. Hold briefly at top, then lower slowly. Keep core engaged and avoid leaning forward.",
+    "muscleGroups": ["Calves", "Lower Legs"],
+    "image": "https://www.shutterstock.com/image-vector/man-doing-external-rotation-bodyweight-600nw-2204729405.jpg"
+  },
+  {
+    "id": 61,
+    "name": "Seated Calf Raise",
+    "instructions": "Sit on a bench, feet flat on the ground, holding weights on knees if desired. Push through balls of feet to lift heels, hold, then lower slowly. Engage calves and avoid bouncing.",
+    "muscleGroups": ["Calves"],
+    "image": "https://gymgeek.com/wp-content/uploads/2023/10/seated-calf-raises.png"
+  },
+  {
+    "id": 62,
+    "name": "Standing Side Leg Raise",
+    "instructions": "Stand upright holding a support. Lift one leg straight out to the side, keeping torso upright. Lower slowly and repeat. Switch legs. Engage core and glutes throughout.",
+    "muscleGroups": ["Glutes", "Hip Abductors", "Core"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT74PBALXKf4GrIWZavkH9GftawdJFdRwSstoCrI1C--4mSP0daCXr3D4qD4v3XRuxjtig&usqp=CAU"
+  },
+
+  {
+    "id": 65,
+    "name": "Bird Dog",
+    "instructions": "Start on all fours. Extend right arm forward and left leg back until they form a straight line. Hold briefly, return to start. Alternate sides. Keep core engaged and spine neutral.",
+    "muscleGroups": ["Core", "Back", "Glutes", "Shoulders"],
+    "image": "https://www.shutterstock.com/image-vector/woman-doing-bird-dogs-alternating-600nw-1958322277.jpg"
+  },
+  {
+    "id": 66,
+    "name": "Superman",
+    "instructions": "Lie face down, arms extended in front. Lift arms, chest, and legs off floor simultaneously, squeezing back and glutes. Hold briefly, lower slowly. Keep neck neutral.",
+    "muscleGroups": ["Back", "Glutes", "Shoulders"],
+    "image": "https://www.gofitnessplan.com/images/exercises/mixed/superman.jpg"
+  },
+  {
+    "id": 67,
+    "name": "Push-Up to Side Plank",
+    "instructions": "Perform a push-up, then rotate to side plank on right side, lifting left arm up. Return to push-up, repeat on left side. Keep body aligned and core engaged throughout.",
+    "muscleGroups": ["Chest", "Shoulders", "Triceps", "Core"],
+    "image": "https://cloudfront-us-east-1.images.arcpublishing.com/ajc/G53EYZI5MSGJXWASL3QBAWRHKY.jpg"
+  },
+  {
+    "id": 68,
+    "name": "Renegade Row",
+    "instructions": "Start in high plank, holding a dumbbell in each hand. Row right dumbbell toward torso while stabilizing with left arm. Lower slowly, then row left. Keep hips stable and core tight.",
+    "muscleGroups": ["Back", "Biceps", "Core", "Shoulders"],
+    "image": "https://t3.ftcdn.net/jpg/04/36/10/94/360_F_436109406_M10N2ESerOs9y5z3m0szLW1vcBrwrGf4.jpg"
+  },
+  {
+    "id": 69,
+     "name": "Bear Crawl",
+    "instructions": "Start on hands and feet with knees hovering above the ground. Move opposite hand and foot forward simultaneously in a crawling motion. Keep hips low and core tight.",
+    "muscleGroups": ["Core", "Shoulders", "Legs"],
+    "image": "https://www.shutterstock.com/image-vector/bear-crawl-exercise-introduction-step-600nw-2095800637.jpg"
+  },
+
+  {
+    "id": 71,
+    "name": "Dumbbell Lateral Raise",
+    "instructions": "Stand upright, hold dumbbells at sides. Raise arms out to the sides to shoulder height with elbows slightly bent. Lower slowly. Engage shoulders and avoid shrugging.",
+    "muscleGroups": ["Shoulders", "Traps"],
+    "image": "https://cdn.vectorstock.com/i/500p/97/62/seated-dumbbell-lateral-raises-fitness-exercise-vector-40569762.jpg"
+  },
+  {
+    "id": 73,
+    "name": "Tricep Kickback",
+    "instructions": "Hold a dumbbell in each hand, hinge at hips with back flat. Bend elbows to 90 degrees, then straighten arms behind you. Squeeze triceps at top, lower slowly. Keep upper arms still.",
+    "muscleGroups": ["Triceps", "Shoulders"],
+    "image": "https://www.shutterstock.com/image-vector/woman-doing-bent-over-double-600nw-2089064620.jpg"
+  },
+  {
+    "id": 75,
+    "name": "Chest Press",
+    "instructions": "Lie on a bench holding dumbbells at chest level. Press weights up until arms are fully extended, then lower slowly. Keep shoulder blades pressed into bench and core engaged.",
+    "muscleGroups": ["Chest", "Shoulders", "Triceps"],
+    "image": "https://www.shutterstock.com/image-vector/man-doing-lying-chest-press-600nw-2400149023.jpg"
+  },
+{
+    "id": 89,
+    "name": "Face Pull",
+    "instructions": "Attach rope to cable at upper level. Pull rope toward face, elbows out, squeezing shoulder blades. Slowly return. Keep torso stable and core engaged.",
+    "muscleGroups": ["Shoulders", "Traps", "Rear Delts", "Upper Back"],
+    "image": "https://gymgeek.com/wp-content/uploads/2023/11/cable-face-pulls.png"
+  },
+
+ {
+    "id": 92,
+    "name": "Bulgarian Split Squat",
+    "instructions": "Stand a few feet in front of a bench. Place rear foot on bench, hold dumbbells optionally. Lower front leg into a squat, then press back up. Keep torso upright and front knee aligned with toes.",
+    "muscleGroups": ["Quadriceps", "Glutes", "Hamstrings", "Core"],
+    "image": "https://static.vecteezy.com/system/resources/previews/007/341/621/non_2x/woman-doing-bulgarian-split-squat-exercise-flat-illustration-isolated-on-white-background-free-vector.jpg"
+  },
+
+ {
+    "id": 95,
+    "name": "Romanian Deadlift",
+    "instructions": "Hold dumbbells or barbell in front, feet hip-width apart. Hinge at hips, lowering weights along legs while keeping back straight. Return to standing by contracting glutes. Keep slight bend in knees.",
+    "muscleGroups": ["Hamstrings", "Glutes", "Back"],
+    "image": "https://www.shutterstock.com/image-vector/woman-doing-romanian-deadlift-exercise-600nw-2118315965.jpg"
+  },
     {
-      id: 1,
-      name: "Push-ups",
-      muscleGroups: ["Chest", "Triceps", "Shoulders"],
-      instructions:
-        "Start in a plank position with your hands slightly wider than shoulder-width apart. Lower your chest until it nearly touches the floor, then push back up.",
-      image:
-        "data:image/jpeg;base64,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8acsWwoOQck9N6rr9Lx5ENx6RJICUjMvNd9QOGSMvk5B8B510y9uwC7mOV2N16TGHkXTGOckukMq6zlUCYJK+ONsVqWHauNJNcsc0xUtHAXlUGCFw4bTpTvTnmN3z128hQaby8VREPPvAH16UWWfUvLcRtqQHKd5gNx4itH5evfttz/jy/mq54n2qSSz9EVJsK2tZZJtcpZWyokbSNaYLd36J0kdN+WoLH5fvvt11+Im/PT5fvvt11+Im/PVdSpFj8v33266/ETfnp8v33266/ETfnqupQWPy/ffbrr8RN+eny/ffbrr8RN+eq6lBYnj999uuvxE3568jjl6Ol7cj3Tyj/qrQpQWPy/ffbrr8RN+eny/ffbrr8RN+eq6lBY/L999uuvxE356fL999uuvxE356rqUFj8v33266/ETfnqG47enre3J988x/m1V9KCwHHr0dL25HunmH/VU/L999uuvxE356rqUFj8v33266/ETfnp8v33266/ETfnqupQdC0nFgCxurrAGc+lSdMZ8JKwyX3E1Yqby6yADj0mU7HofXqpRo8bx5PnqI/hivXMj/uv8x+7pQWnp/E/tl1+Jl/PWs3Hb8Eg311kbf1ib89afMj/u/wDMf+1YjQWHy/ffbrr8RN+elV1KBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKD//Z",
-    },
-    {
-      id: 2,
-      name: "Squats",
-      muscleGroups: ["Quadriceps", "Glutes", "Hamstrings"],
-      instructions:
-        "Stand with feet shoulder-width apart. Lower your hips back and down as if sitting into a chair, keeping your chest up. Return to standing.",
-      image:
-        "data:image/jpeg;base64,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",
-    },
-    {
-      id: 3,
-      name: "Bench Press",
-      muscleGroups: ["Chest", "Triceps", "Shoulders"],
-      instructions:
-        "Lie on a bench with feet flat. Lower the barbell to your chest, then press it back up to full arm extension.",
-      image:
-        "data:image/png;base64,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",
-    },
-    {
-      id: 4,
-      name: "Deadlift",
-      muscleGroups: ["Back", "Glutes", "Hamstrings"],
-      instructions:
-        "Stand with feet hip-width apart, barbell over mid-foot. Hinge at the hips, grip the bar, and lift while keeping your back straight.",
-      image:
-        "data:image/png;base64,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",
-    },
-    {
-      id: 5,
-      name: "Plank",
-      muscleGroups: ["Core", "Abs", "Shoulders"],
-      instructions:
-        "Start in a forearm plank position. Keep your body straight and your core tight. Hold for the desired time.",
-      image:
-        "https://www.oprah.com/g/image-resizer?width=670&link=https://static.oprah.com/images/200505/omag/200505-omag-fitness-plank-600x411.jpg",
-    },
-  ];
+    "id": 97,
+    "name": "Bear Crawl",
+    "instructions": "Start on hands and feet with knees hovering above the ground. Move opposite hand and foot forward simultaneously in a crawling motion. Keep hips low and core tight.",
+    "muscleGroups": ["Core", "Shoulders", "Legs"],
+    "image": "https://www.shutterstock.com/image-vector/bear-crawl-exercise-introduction-step-600nw-2095800637.jpg"
+  },
+  {
+    "id": 99,
+    "name": "Battle Rope Waves",
+    "instructions": "Hold ends of battle ropes in each hand. Bend knees slightly, engage core, and rapidly alternate arms up and down to create waves in the ropes. Keep pace steady and torso stable.",
+    "muscleGroups": ["Shoulders", "Arms", "Core", "Cardio"],
+    "image": "https://www.shutterstock.com/image-vector/woman-doing-battle-rope-double-600nw-2364568255.jpg"
+  }
+
+]
+
+
+
+
+
+
+;
 
   return (
     <main> 

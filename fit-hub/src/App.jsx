@@ -12,6 +12,7 @@ import About from "./components/Pages/About";
 import WorkoutSubmitted from "./components/Pages/WorkoutSubmitted";
 
 function App() {
+  const [exerciseData, setExerciseData] = useState(null);
   // Initialize workout history from localStorage or empty array if there is nothing in storage
   const [workoutHistory, setWorkoutHistory] = useState(() => {
     const saved = localStorage.getItem("workoutHistory");
