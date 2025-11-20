@@ -21,13 +21,12 @@
 
 .card img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 9;    /* maintains 16:9 ratio */
+  object-fit: contain;      /* makes sure the entire image fits */
   border-radius: 10px;
-  object-fit: contain; /* shows entire image without cropping */
   margin-bottom: 10px;
-  border: 2px solid #1e90ff20; /* subtle transparent blue border */
+  border: 2px solid #1e90ff20;
 }
-
 .card h3 {
   margin: 0;
   text-align: center;

@@ -1,7 +1,7 @@
 import ExerciseCard from "../reusable/ExerciseCard";
 
 function ExerciseLibrary() {
-  const mockExercises = [
+  const exerciseData = [
     {
       id: 1,
       name: "Push-Up",
@@ -453,7 +453,7 @@ function ExerciseLibrary() {
         "https://static.vecteezy.com/system/resources/previews/026/751/825/non_2x/woman-doing-side-to-side-jump-squat-exercise-vector.jpg",
     },
     {
-      id: 53,
+      id: 51,
       name: "Plank Shoulder Tap",
       instructions:
         "Start in a high plank position with hands under shoulders. Lift right hand to tap left shoulder, then return. Alternate sides while keeping hips stable. Engage core to minimize rocking.",
@@ -463,7 +463,7 @@ function ExerciseLibrary() {
     },
 
     {
-      id: 58,
+      id: 52,
       name: "Flutter Kicks",
       instructions:
         "Lie on your back, hands under hips. Lift legs slightly off the ground and alternate small kicks up and down. Keep core tight and lower back pressed to floor. Maintain a steady pace.",
@@ -472,7 +472,7 @@ function ExerciseLibrary() {
         "https://t4.ftcdn.net/jpg/02/55/19/97/360_F_255199728_NSWOS8SQxD8S32UhiJHnm5UvOJcVtA86.jpg",
     },
     {
-      id: 59,
+      id: 53,
       name: "V-Ups",
       instructions:
         "Lie flat on back, arms overhead, legs straight. Simultaneously lift upper body and legs to meet in a V position. Lower back down slowly with control. Keep core engaged throughout.",
@@ -480,7 +480,7 @@ function ExerciseLibrary() {
       image: "https://gymgeek.com/wp-content/uploads/2024/02/v-sits.png",
     },
     {
-      id: 60,
+      id: 54,
       name: "Standing Calf Raise",
       instructions:
         "Stand upright with feet hip-width apart. Push through balls of feet to lift heels off the ground. Hold briefly at top, then lower slowly. Keep core engaged and avoid leaning forward.",
@@ -489,7 +489,7 @@ function ExerciseLibrary() {
         "https://www.shutterstock.com/image-vector/man-doing-external-rotation-bodyweight-600nw-2204729405.jpg",
     },
     {
-      id: 61,
+      id: 55,
       name: "Seated Calf Raise",
       instructions:
         "Sit on a bench, feet flat on the ground, holding weights on knees if desired. Push through balls of feet to lift heels, hold, then lower slowly. Engage calves and avoid bouncing.",
@@ -498,7 +498,7 @@ function ExerciseLibrary() {
         "https://gymgeek.com/wp-content/uploads/2023/10/seated-calf-raises.png",
     },
     {
-      id: 62,
+      id: 56,
       name: "Standing Side Leg Raise",
       instructions:
         "Stand upright holding a support. Lift one leg straight out to the side, keeping torso upright. Lower slowly and repeat. Switch legs. Engage core and glutes throughout.",
@@ -508,7 +508,7 @@ function ExerciseLibrary() {
     },
 
     {
-      id: 65,
+      id: 57,
       name: "Bird Dog",
       instructions:
         "Start on all fours. Extend right arm forward and left leg back until they form a straight line. Hold briefly, return to start. Alternate sides. Keep core engaged and spine neutral.",
@@ -517,7 +517,7 @@ function ExerciseLibrary() {
         "https://www.shutterstock.com/image-vector/woman-doing-bird-dogs-alternating-600nw-1958322277.jpg",
     },
     {
-      id: 66,
+      id: 58,
       name: "Superman",
       instructions:
         "Lie face down, arms extended in front. Lift arms, chest, and legs off floor simultaneously, squeezing back and glutes. Hold briefly, lower slowly. Keep neck neutral.",
@@ -526,7 +526,7 @@ function ExerciseLibrary() {
         "https://www.gofitnessplan.com/images/exercises/mixed/superman.jpg",
     },
     {
-      id: 67,
+      id: 59,
       name: "Push-Up to Side Plank",
       instructions:
         "Perform a push-up, then rotate to side plank on right side, lifting left arm up. Return to push-up, repeat on left side. Keep body aligned and core engaged throughout.",
@@ -535,7 +535,7 @@ function ExerciseLibrary() {
         "https://cloudfront-us-east-1.images.arcpublishing.com/ajc/G53EYZI5MSGJXWASL3QBAWRHKY.jpg",
     },
     {
-      id: 68,
+      id: 60,
       name: "Renegade Row",
       instructions:
         "Start in high plank, holding a dumbbell in each hand. Row right dumbbell toward torso while stabilizing with left arm. Lower slowly, then row left. Keep hips stable and core tight.",
@@ -544,7 +544,7 @@ function ExerciseLibrary() {
         "https://t3.ftcdn.net/jpg/04/36/10/94/360_F_436109406_M10N2ESerOs9y5z3m0szLW1vcBrwrGf4.jpg",
     },
     {
-      id: 69,
+      id: 61,
       name: "Bear Crawl",
       instructions:
         "Start on hands and feet with knees hovering above the ground. Move opposite hand and foot forward simultaneously in a crawling motion. Keep hips low and core tight.",
@@ -554,7 +554,7 @@ function ExerciseLibrary() {
     },
 
     {
-      id: 71,
+      id: 62,
       name: "Dumbbell Lateral Raise",
       instructions:
         "Stand upright, hold dumbbells at sides. Raise arms out to the sides to shoulder height with elbows slightly bent. Lower slowly. Engage shoulders and avoid shrugging.",
@@ -563,7 +563,7 @@ function ExerciseLibrary() {
         "https://cdn.vectorstock.com/i/500p/97/62/seated-dumbbell-lateral-raises-fitness-exercise-vector-40569762.jpg",
     },
     {
-      id: 73,
+      id: 63,
       name: "Tricep Kickback",
       instructions:
         "Hold a dumbbell in each hand, hinge at hips with back flat. Bend elbows to 90 degrees, then straighten arms behind you. Squeeze triceps at top, lower slowly. Keep upper arms still.",
@@ -572,7 +572,7 @@ function ExerciseLibrary() {
         "https://www.shutterstock.com/image-vector/woman-doing-bent-over-double-600nw-2089064620.jpg",
     },
     {
-      id: 75,
+      id: 64,
       name: "Chest Press",
       instructions:
         "Lie on a bench holding dumbbells at chest level. Press weights up until arms are fully extended, then lower slowly. Keep shoulder blades pressed into bench and core engaged.",
@@ -581,7 +581,7 @@ function ExerciseLibrary() {
         "https://www.shutterstock.com/image-vector/man-doing-lying-chest-press-600nw-2400149023.jpg",
     },
     {
-      id: 89,
+      id: 65,
       name: "Face Pull",
       instructions:
         "Attach rope to cable at upper level. Pull rope toward face, elbows out, squeezing shoulder blades. Slowly return. Keep torso stable and core engaged.",
@@ -591,7 +591,7 @@ function ExerciseLibrary() {
     },
 
     {
-      id: 92,
+      id: 66,
       name: "Bulgarian Split Squat",
       instructions:
         "Stand a few feet in front of a bench. Place rear foot on bench, hold dumbbells optionally. Lower front leg into a squat, then press back up. Keep torso upright and front knee aligned with toes.",
@@ -601,7 +601,7 @@ function ExerciseLibrary() {
     },
 
     {
-      id: 95,
+      id: 67,
       name: "Romanian Deadlift",
       instructions:
         "Hold dumbbells or barbell in front, feet hip-width apart. Hinge at hips, lowering weights along legs while keeping back straight. Return to standing by contracting glutes. Keep slight bend in knees.",
@@ -610,7 +610,7 @@ function ExerciseLibrary() {
         "https://www.shutterstock.com/image-vector/woman-doing-romanian-deadlift-exercise-600nw-2118315965.jpg",
     },
     {
-      id: 97,
+      id: 68,
       name: "Bear Crawl",
       instructions:
         "Start on hands and feet with knees hovering above the ground. Move opposite hand and foot forward simultaneously in a crawling motion. Keep hips low and core tight.",
@@ -619,7 +619,7 @@ function ExerciseLibrary() {
         "https://www.shutterstock.com/image-vector/bear-crawl-exercise-introduction-step-600nw-2095800637.jpg",
     },
     {
-      id: 99,
+      id: 69,
       name: "Battle Rope Waves",
       instructions:
         "Hold ends of battle ropes in each hand. Bend knees slightly, engage core, and rapidly alternate arms up and down to create waves in the ropes. Keep pace steady and torso stable.",
@@ -633,7 +633,7 @@ function ExerciseLibrary() {
     <main>
       <h2 className="exercise-title">Exercise Library</h2>
       <section className="exercise-grid">
-        {mockExercises.map((exercise) => (
+        {exerciseData.map((exercise) => (
           <ExerciseCard key={exercise.id} exercise={exercise} />
         ))}
       </section>

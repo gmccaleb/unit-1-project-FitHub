@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Home from "./components/Pages/Home";
 import ExerciseLibrary from "./components/Pages/ExerciseLibrary";
 import LogWorkout from "./components/Pages/LogWorkout";
-import WorkOutHistory from "./components/Pages/WorkOutHistory";
+import WorkOutHistory from "./components/Pages/WorkoutHistory";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import About from "./components/Pages/About";
@@ -16,7 +16,7 @@ function App() {
   const [workoutHistory, setWorkoutHistory] = useState(() => {
     const saved = localStorage.getItem("workoutHistory");
     // return what is saved in local storage, if nothing is saved then return empty array
-    return saved ? JSON.parse(saved) : []; 
+    return saved ? JSON.parse(saved) : [];
   });
 
   // Updates localStorage whenever workoutHistory changes

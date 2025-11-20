@@ -2,7 +2,7 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* full viewport height */
+  min-height: 100vh; 
 }
 
 /* Main content fills available space */
