@@ -39,8 +39,10 @@ function WorkOutHistory({ workoutHistory, setWorkoutHistory }) {
                     <ul>
                       {(workout.exercises || []).map((exercise, i) => {
                         const details = [];
-                        if (exercise.sets) details.push(`${exercise.sets} sets`);
-                        if (exercise.reps) details.push(`${exercise.reps} reps`);
+                        if (exercise.sets)
+                          details.push(`${exercise.sets} sets`);
+                        if (exercise.reps)
+                          details.push(`${exercise.reps} reps`);
 
                         return (
                           <li key={i}>

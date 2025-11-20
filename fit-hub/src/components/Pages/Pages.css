@@ -22,7 +22,7 @@
 }
 
 .home h1::after {
-  content: "";
+  content: ""; /* required for ::after to work */
   display: block;
   width: 80px;
   height: 4px;
@@ -38,7 +38,7 @@
   justify-content: center;
   gap: 2rem;
   margin: 2rem 0;
-  text-align: left; 
+  text-align: left;
 }
 
 .home-image {
@@ -52,9 +52,9 @@
   line-height: 1.7;
   color: #333;
   max-width: 500px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Keep original image rule for any standalone images */
 .home img {
   border-radius: 12px;
   margin: 20px 0;
@@ -65,7 +65,7 @@
   text-align: center;
 }
 
-/* Buttons */
+/* Button like links */
 .btn-link {
   display: inline-block;
   margin: 8px 0;
@@ -82,7 +82,7 @@
   transform: translateY(-2px);
 }
 
-/* Responsive layout for small screens */
+/* Responsive layout */
 @media (max-width: 768px) {
   .intro-section {
     flex-direction: column;
@@ -247,7 +247,7 @@
 
 .log-workout form {
   margin-bottom: 20px;
-  overflow-x: auto; 
+  overflow-x: auto;
 }
 
 .exercise-inputs {
@@ -257,7 +257,8 @@
   margin-bottom: 15px;
 }
 
-.exercise-inputs, .workout-title input {
+.exercise-inputs,
+.workout-title input {
   flex: 1;
   min-width: 80px;
   padding: 8px 10px;
@@ -279,7 +280,6 @@
     flex-direction: column;
   }
 }
-
 
 /* ==================================================
    WORKOUT SUBMITTED / CONFIRMATION PAGE
@@ -326,7 +326,7 @@
 }
 
 .workout-submitted strong {
-  color: #1e40af; /* slightly darker blue for emphasis */
+  color: #1e40af;
 }
 
 .workout-submitted a {
@@ -346,12 +346,11 @@
   transform: translateY(-2px);
 }
 
-
 /* ==================================================
    WORKOUT HISTORY PAGE
 ================================================== */
 .workout-history h2 {
-    font-size: 2.2rem;
+  font-size: 2.2rem;
   text-align: center;
   margin-bottom: 30px;
   color: #1e90ff;
@@ -359,7 +358,6 @@
   letter-spacing: 1px;
   position: relative;
 }
-
 
 .workout-history h2::after {
   content: "";
@@ -402,7 +400,7 @@
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* Exercises list inside table cell */
+/* Exercises list inside the table cell */
 .workout-history td ul {
   list-style: none;
   padding-left: 0;
@@ -413,11 +411,3 @@
   margin-bottom: 4px;
   font-size: 0.95rem;
 }
-
-
-
-
-
-
-
-

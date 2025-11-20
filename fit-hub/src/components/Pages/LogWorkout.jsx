@@ -80,9 +80,12 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
               onChange={(e) =>
                 handleExerciseChange(index, "sets", e.target.value)
               }
-              min={0} 
+              min={0}
               onKeyDown={(event) => {
-                if (event.key === "e" || event.key === "E") {  {/* prevents e from being entered */}
+                if (event.key === "e" || event.key === "E") {
+                  {
+                    /* prevents e from being entered */
+                  }
                   event.preventDefault();
                 }
               }}
@@ -94,7 +97,7 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
               onChange={(e) =>
                 handleExerciseChange(index, "reps", e.target.value)
               }
-              min={0} 
+              min={0}
               onKeyDown={(event) => {
                 if (event.key === "e" || event.key === "E") {
                   event.preventDefault();
@@ -111,7 +114,7 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
               min={0}
               onKeyDown={(event) => {
                 if (event.key === "e" || event.key === "E") {
-                  event.preventDefault(); 
+                  event.preventDefault();
                 }
               }}
             />
@@ -131,4 +134,3 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
 }
 
 export default LogWorkout;
-
