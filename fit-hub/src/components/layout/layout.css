@@ -1,16 +1,29 @@
 /* ==================================================
+    STYLING FOR ALL
+================================================== */
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  color: #111827;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #e8f4fc; /* light sky tone */
+  box-sizing: border-box;
+}
+
+/* ==================================================
    HEADER STYLING
 ================================================== */
 
 /* Header container */
 header {
   display: flex;
-  justify-content: space-between; /* Title on the left, nav on the right */
+  justify-content: space-between; /* Title left, nav right */
   align-items: center;
   padding: 15px 30px;
-  background-color: #f8f9fa; 
+  background-color: #f8f9fa;
   border-bottom: 2px solid #e0e0e0;
-  box-sizing: border-box;
 }
 
 /* Site title */
@@ -22,9 +35,32 @@ header {
   letter-spacing: 1px;
 }
 
+/* Slide & fade on page load and hover pop */
+.slide-fade-hover {
+  animation: slideFade 0.7s ease-out;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+@keyframes slideFade {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-fade-hover:hover {
+  transform: scale(1.08); /* small pop */
+}
+
+/* Link styling for title */
 #title a {
-  text-decoration: none; /* removes underline */
-  color: inherit; /* inherits h1 color */
+  text-decoration: none;
+  color: inherit;
 }
 
 #title a:hover h1 {
@@ -32,13 +68,13 @@ header {
   cursor: pointer;
 }
 
-/* Navigation menu container */
+/* Navigation menu */
 .nav-menu {
   display: flex;
   gap: 15px; /* Space between nav links */
 }
 
-/* Nav links styling */
+/* Navigation links styling */
 .nav-menu a {
   text-decoration: none;
   color: #333;
@@ -54,15 +90,28 @@ header {
 }
 
 /* ==================================================
+   FOOTER STYLING
+================================================== */
+
+footer {
+  background-color: #f8f9fa; /* same as header */
+  border-top: 2px solid #e0e0e0;
+  text-align: center;
+  padding: 15px 30px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* ==================================================
    RESPONSIVE STYLING
 ================================================== */
 
-/* Tablet adjustments */
+/* Tablet */
 @media (max-width: 900px) {
   header {
     flex-direction: row;
     align-items: center;
-    padding: 15px 20px; /* slightly smaller horizontal padding */
+    padding: 15px 20px;
   }
 
   .nav-menu {
@@ -70,7 +119,7 @@ header {
   }
 }
 
-/* Mobile adjustments */
+/* Mobile */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -99,18 +148,4 @@ header {
   .nav-menu a:hover {
     background-color: #0072d1;
   }
-}
-
-/* ==================================================
-   FOOTER STYLING
-================================================== */
-
-footer {
-  background-color: #f8f9fa; /* same as header */
-  border-top: 2px solid #e0e0e0; 
-  text-align: center;            
-  padding: 15px 30px;            
-  font-size: 0.9rem;             
-  color: #333;                  
-  box-sizing: border-box;
 }

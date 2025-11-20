@@ -12,11 +12,11 @@ import About from "./components/Pages/About";
 import WorkoutSubmitted from "./components/Pages/WorkoutSubmitted";
 
 function App() {
-  const [exerciseData, setExerciseData] = useState(null);
   // Initialize workout history from localStorage or empty array if there is nothing in storage
   const [workoutHistory, setWorkoutHistory] = useState(() => {
     const saved = localStorage.getItem("workoutHistory");
-    return saved ? JSON.parse(saved) : [];
+    // return what is saved in local storage, if nothing is saved then return empty array
+    return saved ? JSON.parse(saved) : []; 
   });
 
   // Updates localStorage whenever workoutHistory changes
@@ -33,12 +33,16 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />
             <Route path="/Exercise-Library" element={<ExerciseLibrary />} />
-            <Route path="/Log-Workout" element={
-                <LogWorkout workoutHistory={workoutHistory} setWorkoutHistory={setWorkoutHistory}/>}
+            <Route
+              path="/Log-Workout"
+              element={
+                <LogWorkout
+                  workoutHistory={workoutHistory}
+                  setWorkoutHistory={setWorkoutHistory}
+                />
+              }
             />
-
-  <Route path="/Workout-Submitted" element={<WorkoutSubmitted/>} />
-
+            <Route path="/Workout-Submitted" element={<WorkoutSubmitted />} />
             {/* Pass history state to WorkoutHistory */}
             <Route
               path="/Workout-History"

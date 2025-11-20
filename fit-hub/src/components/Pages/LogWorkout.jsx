@@ -54,6 +54,7 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
           <h4>Workout Title:</h4>
           <input
             type="text"
+            placeholder="Title"
             value={workoutTitle}
             onChange={(e) => setWorkoutTitle(e.target.value)}
             required

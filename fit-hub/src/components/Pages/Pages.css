@@ -181,11 +181,11 @@
    EXERCISE LIBRARY
 ================================================== */
 .exercise-title {
-  color: #1e90ff;
+  font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1e90ff;
+  font-weight: 800;
   letter-spacing: 1px;
   position: relative;
 }
@@ -257,7 +257,7 @@
   margin-bottom: 15px;
 }
 
-.exercise-inputs input {
+.exercise-inputs, .workout-title input {
   flex: 1;
   min-width: 80px;
   padding: 8px 10px;
@@ -351,13 +351,24 @@
    WORKOUT HISTORY PAGE
 ================================================== */
 .workout-history h2 {
-  color: #1e90ff;
+    font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1e90ff;
+  font-weight: 800;
   letter-spacing: 1px;
   position: relative;
+}
+
+
+.workout-history h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #1e90ff;
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
 }
 
 .workout-history table {
@@ -409,25 +420,4 @@
 
 
 
-.reset-history-btn {
-  display: inline-block;
-  margin: 10px 0;
-  padding: 10px 22px;
-  background-color: #ff0000; 
-  color: #ffffff;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: center;
-}
-
-.reset-history-btn:hover {
-  background-color: #d50000; 
-  transform: translateY(-2px); /* moves button up like its floating*/
-}
-
-.reset-history-btn:active {
-  transform: translateY(0);
-}
 

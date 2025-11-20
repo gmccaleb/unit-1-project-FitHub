@@ -106,7 +106,7 @@ function ExerciseLibrary() {
     "name": "Leg Raise",
     "instructions": "Lie flat on your back with legs straight and hands under your glutes for support. Keep legs together and raise them toward the ceiling until hips are slightly off the floor. Lower slowly without touching the ground. Engage core throughout.",
     "muscleGroups": ["Abs", "Hip Flexors"],
-    "image": ""
+    "image": "https://previews.123rf.com/images/lioputra/lioputra2112/lioputra211200378/178956206-woman-doing-lying-leg-raises-lifts-exercise-flat-vector-illustration-isolated-on-white-background.jpg"
   },
   {
     "id": 16,
@@ -492,14 +492,7 @@ function ExerciseLibrary() {
     "image": "https://www.shutterstock.com/image-vector/woman-doing-battle-rope-double-600nw-2364568255.jpg"
   }
 
-]
-
-
-
-
-
-
-;
+];
 
   return (
     <main> 
