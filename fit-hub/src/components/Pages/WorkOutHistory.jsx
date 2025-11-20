@@ -1,6 +1,6 @@
 import Button from "../reusable/Button";
 
-function WorkOutHistory({ workoutHistory, setWorkoutHistory }) {
+function WorkoutHistory({ workoutHistory, setWorkoutHistory }) {
   // Handler to reset history
   const handleReset = () => {
     localStorage.removeItem("workoutHistory"); // clear localStorage
@@ -39,8 +39,10 @@ function WorkOutHistory({ workoutHistory, setWorkoutHistory }) {
                     <ul>
                       {(workout.exercises || []).map((exercise, i) => {
                         const details = [];
-                        if (exercise.sets) details.push(`${exercise.sets} sets`);
-                        if (exercise.reps) details.push(`${exercise.reps} reps`);
+                        if (exercise.sets)
+                          details.push(`${exercise.sets} sets`);
+                        if (exercise.reps)
+                          details.push(`${exercise.reps} reps`);
 
                         return (
                           <li key={i}>
@@ -62,4 +64,4 @@ function WorkOutHistory({ workoutHistory, setWorkoutHistory }) {
   );
 }
 
-export default WorkOutHistory;
+export default WorkoutHistory;

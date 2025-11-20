@@ -1,26 +1,17 @@
-/* Make the app container fill the viewport and use flex column */
+/* Makes the app container fill the viewport and use flex column */
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* full viewport height */
+  min-height: 100vh; 
 }
 
-/* Main content grows to fill available space */
+/* Main content fills available space */
 .app-content {
   flex: 1; /* expands between header and footer */
   padding: 20px;
   box-sizing: border-box;
 }
 
-
 a {
   text-decoration: none;
-  color: inherit; /* keeps link color same as text */
 }
-#title a:hover h1 {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-
-

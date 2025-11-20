@@ -1,5 +1,6 @@
+/* Submit Button */
 .submit-btn {
-  background-color: #2196f3; /* Submit */
+  background-color: #2196f3;
   color: white;
   padding: 10px 16px;
   border-radius: 6px;
@@ -7,12 +8,13 @@
   cursor: pointer;
 }
 
-.submit-btn:hover{
-     background-color: #1976D2;
+.submit-btn:hover {
+  background-color: #1976d2;
 }
 
-.add-exercise-btn{
-     background-color: #4CAF50; /* Add Exercise */
+/* Add Exercise Button */
+.add-exercise-btn {
+  background-color: #4caf50;
   color: white;
   padding: 10px 16px;
   border-radius: 6px;
@@ -20,27 +22,28 @@
   cursor: pointer;
 }
 
-.add-exercise-btn:hover{
-      background-color: #45A049;
-    
+.add-exercise-btn:hover {
+  background-color: #45a049;
 }
 
+/* Reset History Button */
 .reset-history-btn {
   display: inline-block;
   margin: 10px 0;
   padding: 10px 22px;
-  background-color: #ff0000; 
+  background-color: #ff0000;
   color: #ffffff;
   border: none;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .reset-history-btn:hover {
-  background-color: #d50000; 
-  transform: translateY(-2px); /* moves button up like its floating*/
+  background-color: #d50000;
+  transform: translateY(-2px); /* moves button up like it's floating */
 }
 
 .reset-history-btn:active {

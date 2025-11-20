@@ -35,11 +35,27 @@ header {
   letter-spacing: 1px;
 }
 
-/* Slide & fade on page load and hover pop */
 .slide-fade-hover {
   animation: slideFade 0.7s ease-out;
   display: inline-block;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease-in-out; /* smooth transition */
+}
+
+.slide-fade-hover:hover {
+  animation: pulse 1s infinite; /* pulse animation */
+}
+
+/* Keyframes for animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* grow slightly */
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes slideFade {
@@ -51,10 +67,6 @@ header {
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-.slide-fade-hover:hover {
-  transform: scale(1.08); /* small pop */
 }
 
 /* Link styling for title */
@@ -94,7 +106,7 @@ header {
 ================================================== */
 
 footer {
-  background-color: #f8f9fa; /* same as header */
+  background-color: #f8f9fa; 
   border-top: 2px solid #e0e0e0;
   text-align: center;
   padding: 15px 30px;
