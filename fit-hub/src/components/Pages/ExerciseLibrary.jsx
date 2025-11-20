@@ -610,15 +610,6 @@ function ExerciseLibrary() {
         "https://www.shutterstock.com/image-vector/woman-doing-romanian-deadlift-exercise-600nw-2118315965.jpg",
     },
     {
-      id: 68,
-      name: "Bear Crawl",
-      instructions:
-        "Start on hands and feet with knees hovering above the ground. Move opposite hand and foot forward simultaneously in a crawling motion. Keep hips low and core tight.",
-      muscleGroups: ["Core", "Shoulders", "Legs"],
-      image:
-        "https://www.shutterstock.com/image-vector/bear-crawl-exercise-introduction-step-600nw-2095800637.jpg",
-    },
-    {
       id: 69,
       name: "Battle Rope Waves",
       instructions:

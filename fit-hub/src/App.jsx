@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 import Home from "./components/Pages/Home";
 import ExerciseLibrary from "./components/Pages/ExerciseLibrary";
 import LogWorkout from "./components/Pages/LogWorkout";
-import WorkOutHistory from "./components/Pages/WorkoutHistory";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import About from "./components/Pages/About";
 import WorkoutSubmitted from "./components/Pages/WorkoutSubmitted";
+import WorkoutHistory from "./components/Pages/WorkOutHistory";
 
 function App() {
   // Initialize workout history from localStorage or empty array if there is nothing in storage
@@ -47,7 +47,7 @@ function App() {
             <Route
               path="/Workout-History"
               element={
-                <WorkOutHistory
+                <WorkoutHistory
                   workoutHistory={workoutHistory}
                   setWorkoutHistory={setWorkoutHistory}
                 />
