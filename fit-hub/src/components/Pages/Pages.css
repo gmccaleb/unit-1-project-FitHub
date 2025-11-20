@@ -400,7 +400,7 @@
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* Exercises list inside the table cell */
+/* Exercise list inside the table cell */
 .workout-history td ul {
   list-style: none;
   padding-left: 0;
