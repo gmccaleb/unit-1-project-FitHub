@@ -22,4 +22,27 @@
 
 .add-exercise-btn:hover{
       background-color: #45A049;
+    
+}
+
+.reset-history-btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 22px;
+  background-color: #ff0000; 
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.reset-history-btn:hover {
+  background-color: #d50000; 
+  transform: translateY(-2px); /* moves button up like its floating*/
+}
+
+.reset-history-btn:active {
+  transform: translateY(0);
 }

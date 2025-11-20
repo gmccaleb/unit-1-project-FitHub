@@ -1,4 +1,3 @@
-import React from "react";
 import NavMenu from "./NavMenu";
 import { Link } from "react-router";
 
@@ -7,7 +6,7 @@ function Header() {
     <header>
       <div id="title">
         <Link to="/">
-        <h1>FitHub</h1>
+          <h1 className="site-title slide-fade-hover">FitHub</h1>
         </Link>
       </div>
       <NavMenu />
