@@ -12,7 +12,7 @@ function Home() {
           className="home-image"
         />
         <p>
-          FitHub is your all-in-one workout companion — view our vast exercise
+          FitHub is your all-in-one workout assistant — view our vast exercise
           library, log your workouts, and monitor your progress over time.
           Whether you’re just starting out or pushing for new goals, FitHub
           helps you stay organized, motivated, and consistent on your fitness
