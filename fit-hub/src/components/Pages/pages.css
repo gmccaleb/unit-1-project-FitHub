@@ -202,7 +202,7 @@
 
 .exercise-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* automatically adjusts the number of columns based on the available width */
   gap: 25px;
   width: 100%;
   max-width: 1200px;
