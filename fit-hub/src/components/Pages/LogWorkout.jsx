@@ -54,6 +54,7 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
           <h4>Workout Title:</h4>
           <input
             type="text"
+            name="title"
             placeholder="Title"
             value={workoutTitle}
             onChange={(e) => setWorkoutTitle(e.target.value)}
@@ -66,6 +67,7 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
           <div key={index} className="exercise-inputs">
             <input
               type="text"
+              name="exercise-name"
               placeholder="Exercise Name"
               value={exercise.name}
               onChange={(e) =>
@@ -75,6 +77,7 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
             />
             <input
               type="number"
+              name="sets"
               placeholder="Sets"
               value={exercise.sets}
               onChange={(e) =>
@@ -92,6 +95,7 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
             />
             <input
               type="number"
+              name="reps"
               placeholder="Reps"
               value={exercise.reps}
               onChange={(e) =>
@@ -106,6 +110,7 @@ function LogWorkout({ workoutHistory, setWorkoutHistory }) {
             />
             <input
               type="number"
+              name="weight"
               placeholder="Weight (lbs)"
               value={exercise.weight}
               onChange={(e) =>
