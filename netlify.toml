@@ -1,0 +1,4 @@
+[build]
+base = “fit-hub”
+command = “npm run build”
+publish = “dist”
